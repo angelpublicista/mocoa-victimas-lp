@@ -441,7 +441,7 @@ function App() {
           <span className="font-bold">Cortés Rueda Abogados</span> es la compañía oficialmente designada para llevar estos casos de manera <span className="font-bold text-emerald-600">COMPLETAMENTE GRATUITA</span>.
         </p>
         <p className="text-emerald-600 text-xs font-semibold">
-          ⚠️ Recuerde: Si alguien le pide dinero por este servicio, está siendo estafado.
+          ⚠️ Recuerde: Si alguien te pide dinero por este servicio, estás siendo estafado
         </p>
       </div>
     </div>
@@ -469,7 +469,7 @@ function App() {
                 <span className="text-teal-200">Cortés Rueda Abogados</span> - Servicio <span className="text-emerald-400 font-bold">COMPLETAMENTE GRATUITO</span> para víctimas de Mocoa
               </p>
               <p className="text-sm text-teal-100">
-                <span className="font-bold">NO SE DEJE ENGAÑAR:</span> Si alguien le pide dinero, está siendo estafado
+                <span className="font-bold">NO TE DEJES ENGAÑAR:</span> Si alguien le pide dinero, está siendo estafado
               </p>
             </div>
             <FaExclamationTriangle className="text-amber-400 text-xl flex-shrink-0" />
@@ -517,14 +517,14 @@ function App() {
               <span className="text-teal-700 font-bold">Cortés Rueda Abogados</span> es la firma oficialmente designada para representar a las víctimas de Mocoa.
             </p>
             <p className="text-slate-700 font-bold">
-              ⚠️ NO TE DEJES ENGAÑAR: Si alguien te pide dinero, estás siendo estafado.
+              ⚠️ NO TE DEJES ENGAÑAR: Si alguien te pide dinero, está siendo estafado
             </p>
           </div>
         </div>
       </section>
 
       {/* Sección ¿Quién Puede Registrarse? */}
-      <section className="bg-gradient-to-br from-teal-900 to-[#08a99c] py-16 px-4">
+      <section className="bg-gradient-to-br from-teal-900 to-[#08a99c] pt-16 px-4">
         <div className="container mx-auto text-center space-y-8">
           <h2 className="text-5xl font-bold text-amber-400">
             ¿Quién Puede Registrarse?
@@ -533,83 +533,90 @@ function App() {
             Si te identificas con alguna de estas situaciones, eres víctima y tienes derecho a reparación:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            {/* Tarjeta 1: Perdiste tu vivienda */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
-                <FaHome />
-              </div>
-              <h3 className="text-amber-400 font-bold text-xl mb-3">
-                Perdiste tu vivienda
-              </h3>
-              <p className="text-teal-100 text-sm leading-relaxed">
-                Tu casa fue destruida total o parcialmente por la avalancha del 1 de abril de 2017
-              </p>
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Left column */}
+            <div className="w-full lg:w-1/2">
+              <img src="/freepik__upload__30064.png" alt="" className="w-full h-full object-cover" />
             </div>
 
-            {/* Tarjeta 2: Perdiste familiares */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
-                <FaHeart />
+            <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 pb-16">
+              {/* Tarjeta 1: Perdiste tu vivienda */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
+                <div className="text-amber-400 text-5xl mb-4 flex justify-center">
+                  <FaHome />
+                </div>
+                <h3 className="text-amber-400 font-bold text-xl mb-3">
+                  Perdiste tu vivienda
+                </h3>
+                <p className="text-teal-100 text-sm leading-relaxed">
+                  Tu casa fue destruida total o parcialmente por la avalancha del 1 de abril de 2017
+                </p>
               </div>
-              <h3 className="text-amber-400 font-bold text-xl mb-3">
-                Perdiste familiares
-              </h3>
-              <p className="text-teal-100 text-sm leading-relaxed">
-                Familiares fallecieron o resultaron heridos durante la tragedia
-              </p>
-            </div>
 
-            {/* Tarjeta 3: Perdiste enseres y pertenencias */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
-                <FaBoxes />
+              {/* Tarjeta 2: Perdiste familiares */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
+                <div className="text-amber-400 text-5xl mb-4 flex justify-center">
+                  <FaHeart />
+                </div>
+                <h3 className="text-amber-400 font-bold text-xl mb-3">
+                  Perdiste familiares
+                </h3>
+                <p className="text-teal-100 text-sm leading-relaxed">
+                  Familiares fallecieron o resultaron heridos durante la tragedia
+                </p>
               </div>
-              <h3 className="text-amber-400 font-bold text-xl mb-3">
-                Perdiste enseres y pertenencias
-              </h3>
-              <p className="text-teal-100 text-sm leading-relaxed">
-                Muebles, electrodomésticos, vehículos, documentos o cualquier bien material
-              </p>
-            </div>
 
-            {/* Tarjeta 4: Perdiste tu negocio o empleo */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
-                <FaBuilding />
+              {/* Tarjeta 3: Perdiste enseres y pertenencias */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
+                <div className="text-amber-400 text-5xl mb-4 flex justify-center">
+                  <FaBoxes />
+                </div>
+                <h3 className="text-amber-400 font-bold text-xl mb-3">
+                  Perdiste enseres y pertenencias
+                </h3>
+                <p className="text-teal-100 text-sm leading-relaxed">
+                  Muebles, electrodomésticos, vehículos, documentos o cualquier bien material
+                </p>
               </div>
-              <h3 className="text-amber-400 font-bold text-xl mb-3">
-                Perdiste tu negocio o empleo
-              </h3>
-              <p className="text-teal-100 text-sm leading-relaxed">
-                Tu fuente de ingresos se vio afectada por la avalancha
-              </p>
-            </div>
 
-            {/* Tarjeta 5: Sufriste daños físicos o psicológicos */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
-                <FaBrain />
+              {/* Tarjeta 4: Perdiste tu negocio o empleo */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
+                <div className="text-amber-400 text-5xl mb-4 flex justify-center">
+                  <FaBuilding />
+                </div>
+                <h3 className="text-amber-400 font-bold text-xl mb-3">
+                  Perdiste tu negocio o empleo
+                </h3>
+                <p className="text-teal-100 text-sm leading-relaxed">
+                  Tu fuente de ingresos se vio afectada por la avalancha
+                </p>
               </div>
-              <h3 className="text-amber-400 font-bold text-xl mb-3">
-                Sufriste daños físicos o psicológicos
-              </h3>
-              <p className="text-teal-100 text-sm leading-relaxed">
-                Lesiones, traumas, depresión o cualquier afectación a tu salud
-              </p>
-            </div>
 
-            {/* Tarjeta 6: Eres familiar de víctima */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
-                <FaUsers />
+              {/* Tarjeta 5: Sufriste daños físicos o psicológicos */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
+                <div className="text-amber-400 text-5xl mb-4 flex justify-center">
+                  <FaBrain />
+                </div>
+                <h3 className="text-amber-400 font-bold text-xl mb-3">
+                  Sufriste daños físicos o psicológicos
+                </h3>
+                <p className="text-teal-100 text-sm leading-relaxed">
+                  Lesiones, traumas, depresión o cualquier afectación a tu salud
+                </p>
               </div>
-              <h3 className="text-amber-400 font-bold text-xl mb-3">
-                Eres familiar de víctima
-              </h3>
-              <p className="text-teal-100 text-sm leading-relaxed">
-                Cónyuge, hijos, padres o hermanos de personas directamente afectadas
-              </p>
+
+              {/* Tarjeta 6: Eres familiar de víctima */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
+                <div className="text-amber-400 text-5xl mb-4 flex justify-center">
+                  <FaUsers />
+                </div>
+                <h3 className="text-amber-400 font-bold text-xl mb-3">
+                  Eres familiar de víctima
+                </h3>
+                <p className="text-teal-100 text-sm leading-relaxed">
+                  Cónyuge, hijos, padres o hermanos de personas directamente afectadas
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -638,7 +645,7 @@ function App() {
                   <span className="text-red-600">Cortés Rueda Abogados</span> es la compañía oficialmente designada para llevar estos casos de manera <span className="text-emerald-600 font-bold">COMPLETAMENTE GRATUITA</span>.
                 </p>
                 <p className="text-amber-700 text-sm">
-                  <span className="font-bold">NO TE DEJES ENGAÑAR:</span> Si alguien te pide dinero por este servicio, está siendo estafado.
+                  <span className="font-bold">NO TE DEJES ENGAÑAR:</span> Si alguien te pide dinero por este servicio, está siendo estafado
                 </p>
               </div>
             </div>
@@ -724,180 +731,185 @@ function App() {
 
       {/* Sección de Preguntas Frecuentes */}
       <section className="bg-gradient-to-br from-teal-50 to-cyan-50 py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-teal-900 mb-4">
               Preguntas Frecuentes
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {/* FAQ 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button
-                onClick={() => toggleFAQ(1)}
-                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
-              >
-                <span className="font-semibold">
-                  ¿Tengo que pagar algo para registrarme o reclamar mis derechos?
-                </span>
-                {openFAQ === 1 ? <FaChevronUp /> : <FaChevronDown />}
-              </button>
-              {openFAQ === 1 && (
-                <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed mb-3">
-                    ¡NO! El registro inicial es completamente gratuito. Nuestro equipo jurídico se pondrá en contacto contigo para asesorarte sobre los siguientes pasos del proceso de reparación.
-                  </p>
-                  <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-                    <p className="text-emerald-800 font-semibold mb-2">
-                      <span className="text-red-600">Cortés Rueda Abogados</span> es la compañía oficialmente designada para llevar estos casos de manera <span className="text-emerald-600 font-bold">COMPLETAMENTE GRATUITA</span>.
+          <div className="flex flex-col lg:flex-row gap-16">
+            <div className="space-y-4 w-full lg:w-2/3">
+              {/* FAQ 1 */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(1)}
+                  className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+                >
+                  <span className="font-semibold">
+                    ¿Tengo que pagar algo para registrarme o reclamar mis derechos?
+                  </span>
+                  {openFAQ === 1 ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+                {openFAQ === 1 && (
+                  <div className="px-6 py-4 bg-white">
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                      ¡NO! El registro inicial es completamente gratuito. Nuestro equipo jurídico se pondrá en contacto contigo para asesorarte sobre los siguientes pasos del proceso de reparación.
                     </p>
-                    <p className="text-emerald-700 text-sm">
-                      <span className="font-bold">ADVERTENCIA:</span> Si alguien te pide dinero por este servicio, está siendo estafado. Nuestro servicio es 100% gratuito para todas las víctimas.
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* FAQ 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button
-                onClick={() => toggleFAQ(2)}
-                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
-              >
-                <span className="font-semibold">
-                  ¿Ya es muy tarde para reclamar? Han pasado varios años desde 2017
-                </span>
-                {openFAQ === 2 ? <FaChevronUp /> : <FaChevronDown />}
-              </button>
-              {openFAQ === 2 && (
-                <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed">
-                    ¡NO es tarde! Los derechos de las víctimas no prescriben. Aunque hayan pasado años, tu derecho a reparación sigue vigente. La ley colombiana protege a las víctimas sin límite de tiempo.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* FAQ 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button
-                onClick={() => toggleFAQ(3)}
-                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
-              >
-                <span className="font-semibold">
-                  ¿Qué pasa si ya recibí alguna ayuda del gobierno?
-                </span>
-                {openFAQ === 3 ? <FaChevronUp /> : <FaChevronDown />}
-              </button>
-              {openFAQ === 3 && (
-                <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed">
-                    Si ya recibiste ayuda, eso no impide que reclames una reparación integral. La ayuda previa del gobierno es independiente de tu derecho a una reparación completa por los daños sufridos.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* FAQ 4 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button
-                onClick={() => toggleFAQ(4)}
-                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
-              >
-                <span className="font-semibold">
-                  ¿Qué tipo de compensación puedo recibir?
-                </span>
-                {openFAQ === 4 ? <FaChevronUp /> : <FaChevronDown />}
-              </button>
-              {openFAQ === 4 && (
-                <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed">
-                    Puedes recibir compensación por daños materiales, pérdida de vivienda, daños físicos y psicológicos, pérdida de ingresos, y otros perjuicios. La reparación es integral y personalizada según tu caso.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* FAQ 5 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button
-                onClick={() => toggleFAQ(5)}
-                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
-              >
-                <span className="font-semibold">
-                  ¿Necesito documentos o pruebas especiales?
-                </span>
-                {openFAQ === 5 ? <FaChevronUp /> : <FaChevronDown />}
-              </button>
-              {openFAQ === 5 && (
-                <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed">
-                    No necesitas documentos especiales para registrarte. Nuestro equipo jurídico te ayudará a recopilar la información necesaria y gestionar las pruebas requeridas para tu caso.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* FAQ 6 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button
-                onClick={() => toggleFAQ(6)}
-                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
-              >
-                <span className="font-semibold">
-                  ¿Qué pasa después de registrarme?
-                </span>
-                {openFAQ === 6 ? <FaChevronUp /> : <FaChevronDown />}
-              </button>
-              {openFAQ === 6 && (
-                <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed">
-                    Después del registro, un equipo jurídico especializado revisará tu caso, te contactará para más detalles si es necesario, y comenzará el proceso de gestión de tu reparación ante las autoridades competentes.
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* FAQ 7 - Nueva FAQ sobre Cortés Rueda Abogados */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <button
-                onClick={() => toggleFAQ(7)}
-                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
-              >
-                <span className="font-semibold">
-                  ¿Quién es Cortés Rueda Abogados y por qué es importante?
-                </span>
-                {openFAQ === 7 ? <FaChevronUp /> : <FaChevronDown />}
-              </button>
-              {openFAQ === 7 && (
-                <div className="px-6 py-4 bg-white">
-                  <div className="space-y-4">
-                    <p className="text-gray-700 leading-relaxed">
-                      <span className="font-bold text-red-600">Cortés Rueda Abogados</span> es la firma jurídica oficialmente designada por la Defensoría del Pueblo para representar a las víctimas de la catástrofe de Mocoa.
-                    </p>
-                    
                     <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-                      <h4 className="font-bold text-emerald-800 mb-2">✅ Servicio Completamente Gratuito</h4>
+                      <p className="text-emerald-800 font-semibold mb-2">
+                        <span className="text-red-600">Cortés Rueda Abogados</span> es la compañía oficialmente designada para llevar estos casos de manera <span className="text-emerald-600 font-bold">COMPLETAMENTE GRATUITA</span>.
+                      </p>
                       <p className="text-emerald-700 text-sm">
-                        Nuestro servicio es 100% gratuito para todas las víctimas. No cobramos honorarios, comisiones ni ningún tipo de pago.
+                        <span className="font-bold">ADVERTENCIA:</span> Si alguien te pide dinero por este servicio, está siendo estafado. Nuestro servicio es 100% gratuito para todas las víctimas.
                       </p>
                     </div>
-                    
-                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                      <h4 className="font-bold text-red-800 mb-2">⚠️ Advertencia Contra Estafas</h4>
-                      <p className="text-red-700 text-sm">
-                        Si alguien le pide dinero por este servicio, está siendo estafado. Solo Cortés Rueda Abogados está autorizada para llevar estos casos de manera gratuita.
-                      </p>
-                    </div>
-                    
+                  </div>
+                )}
+              </div>
+
+              {/* FAQ 2 */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(2)}
+                  className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+                >
+                  <span className="font-semibold">
+                    ¿Ya es muy tarde para reclamar? Han pasado varios años desde 2017
+                  </span>
+                  {openFAQ === 2 ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+                {openFAQ === 2 && (
+                  <div className="px-6 py-4 bg-white">
                     <p className="text-gray-700 leading-relaxed">
-                      <span className="font-bold">Respaldo Oficial:</span> Contamos con el respaldo de la Defensoría del Pueblo y estamos comprometidos con la defensa de los derechos de las víctimas.
+                      ¡NO es tarde! Los derechos de las víctimas no prescriben. Aunque hayan pasado años, tu derecho a reparación sigue vigente. La ley colombiana protege a las víctimas sin límite de tiempo.
                     </p>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
+
+              {/* FAQ 3 */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(3)}
+                  className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+                >
+                  <span className="font-semibold">
+                    ¿Qué pasa si ya recibí alguna ayuda del gobierno?
+                  </span>
+                  {openFAQ === 3 ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+                {openFAQ === 3 && (
+                  <div className="px-6 py-4 bg-white">
+                    <p className="text-gray-700 leading-relaxed">
+                      Si ya recibiste ayuda, eso no impide que reclames una reparación integral. La ayuda previa del gobierno es independiente de tu derecho a una reparación completa por los daños sufridos.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* FAQ 4 */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(4)}
+                  className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+                >
+                  <span className="font-semibold">
+                    ¿Qué tipo de compensación puedo recibir?
+                  </span>
+                  {openFAQ === 4 ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+                {openFAQ === 4 && (
+                  <div className="px-6 py-4 bg-white">
+                    <p className="text-gray-700 leading-relaxed">
+                      Puedes recibir compensación por daños materiales, pérdida de vivienda, daños físicos y psicológicos, pérdida de ingresos, y otros perjuicios. La reparación es integral y personalizada según tu caso.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* FAQ 5 */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(5)}
+                  className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+                >
+                  <span className="font-semibold">
+                    ¿Necesito documentos o pruebas especiales?
+                  </span>
+                  {openFAQ === 5 ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+                {openFAQ === 5 && (
+                  <div className="px-6 py-4 bg-white">
+                    <p className="text-gray-700 leading-relaxed">
+                      No necesitas documentos especiales para registrarte. Nuestro equipo jurídico te ayudará a recopilar la información necesaria y gestionar las pruebas requeridas para tu caso.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* FAQ 6 */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(6)}
+                  className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+                >
+                  <span className="font-semibold">
+                    ¿Qué pasa después de registrarme?
+                  </span>
+                  {openFAQ === 6 ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+                {openFAQ === 6 && (
+                  <div className="px-6 py-4 bg-white">
+                    <p className="text-gray-700 leading-relaxed">
+                      Después del registro, un equipo jurídico especializado revisará tu caso, te contactará para más detalles si es necesario, y comenzará el proceso de gestión de tu reparación ante las autoridades competentes.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* FAQ 7 - Nueva FAQ sobre Cortés Rueda Abogados */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleFAQ(7)}
+                  className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+                >
+                  <span className="font-semibold">
+                    ¿Quién es Cortés Rueda Abogados y por qué es importante?
+                  </span>
+                  {openFAQ === 7 ? <FaChevronUp /> : <FaChevronDown />}
+                </button>
+                {openFAQ === 7 && (
+                  <div className="px-6 py-4 bg-white">
+                    <div className="space-y-4">
+                      <p className="text-gray-700 leading-relaxed">
+                        <span className="font-bold text-red-600">Cortés Rueda Abogados</span> es la firma jurídica oficialmente designada por la Defensoría del Pueblo para representar a las víctimas de la catástrofe de Mocoa.
+                      </p>
+                      
+                      <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                        <h4 className="font-bold text-emerald-800 mb-2">✅ Servicio Completamente Gratuito</h4>
+                        <p className="text-emerald-700 text-sm">
+                          Nuestro servicio es 100% gratuito para todas las víctimas. No cobramos honorarios, comisiones ni ningún tipo de pago.
+                        </p>
+                      </div>
+                      
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <h4 className="font-bold text-red-800 mb-2">⚠️ Advertencia Contra Estafas</h4>
+                        <p className="text-red-700 text-sm">
+                          Si alguien le pide dinero por este servicio, está siendo estafado. Solo Cortés Rueda Abogados está autorizada para llevar estos casos de manera gratuita.
+                        </p>
+                      </div>
+                      
+                      <p className="text-gray-700 leading-relaxed">
+                        <span className="font-bold">Respaldo Oficial:</span> Contamos con el respaldo de la Defensoría del Pueblo y estamos comprometidos con la defensa de los derechos de las víctimas.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="w-full lg:w-1/3">
+                <img src="/faq.jpg" alt="" className="w-full max-w-md rounded-4xl" />
             </div>
           </div>
         </div>
