@@ -27,9 +27,6 @@ import {
 } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
-import Logo from "../public/logo-horizontal-negro.png"
-import FotoPelaez from "../public/juan-carlos-edit.jpg"
-import FotoCortes from "../public/isabel.jpg"
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -481,9 +478,9 @@ function App() {
       </div>
 
       <section className="bg-gradient-to-br from-teal-50 to-cyan-50 py-16 px-4 flex items-center justify-center" style={{ paddingTop: '120px' }}>
-        <div className="container mx-auto text-center space-y-4">
-          <img src={Logo} alt="Logo" className="w-auto max-w-screen mx-auto " />
-          <hr className="my-8 max-w-[300px] w-full mx-auto text-teal-900" />
+                  <div className="container mx-auto text-center space-y-4">
+            <img src="/logo-horizontal-negro.png" alt="Logo" className="w-auto max-w-screen mx-auto " />
+            <hr className="my-8 max-w-[300px] w-full mx-auto text-teal-900" />
           <h1 className="text-6xl font-bold text-teal-900">
             ¿Fuiste víctima de la tragedia de Mocoa?
           </h1>
@@ -936,9 +933,9 @@ function App() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
               {/* Foto del Abogado */}
               <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-amber-400 flex items-center justify-center overflow-hidden">
-                <div className="w-28 h-28 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
-                  <img src={FotoPelaez} alt="Juan Carlos Peláez Gutiérrez" className="w-full h-full object-cover" />
-                </div>
+                                 <div className="w-28 h-28 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
+                   <img src="/juan-carlos-edit.jpg" alt="Juan Carlos Peláez Gutiérrez" className="w-full h-full object-cover" />
+                 </div>
               </div>
               
               {/* Información */}
@@ -971,9 +968,9 @@ function App() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
               {/* Foto de la Abogada */}
               <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-amber-400 flex items-center justify-center overflow-hidden">
-                <div className="w-28 h-28 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
-                  <img src={FotoCortes} alt="Isabel Cortés Rueda" className="w-full h-full object-cover scale-160 object-top" />
-                </div>
+                                 <div className="w-28 h-28 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
+                   <img src="/isabel.jpg" alt="Isabel Cortés Rueda" className="w-full h-full object-cover scale-160 object-top" />
+                 </div>
               </div>
               
               {/* Información */}
