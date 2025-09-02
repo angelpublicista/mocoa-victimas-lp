@@ -22,12 +22,14 @@ import {
   FaChevronUp,
   FaChevronDown,
   FaGraduationCap,
-  FaHandshake,
   FaClock,
   FaCheckCircle
 } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
+import Logo from "../public/logo-horizontal-negro.png"
+import FotoPelaez from "../public/juan-carlos-edit.jpg"
+import FotoCortes from "../public/isabel.jpg"
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -108,7 +110,7 @@ function App() {
           <div key={step} className="flex items-center">
             <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold ${
               step < currentStep 
-                ? 'bg-green-500 text-white' 
+                ? 'bg-emerald-600 text-white' 
                 : step === currentStep 
                 ? 'bg-[#08a99c] text-white' 
                 : 'bg-gray-300 text-gray-600'
@@ -117,7 +119,7 @@ function App() {
             </div>
             {step < totalSteps && (
               <div className={`w-16 h-1 ${
-                step < currentStep ? 'bg-green-500' : 'bg-gray-300'
+                step < currentStep ? 'bg-emerald-600' : 'bg-gray-300'
               }`}></div>
             )}
           </div>
@@ -431,6 +433,20 @@ function App() {
           <p><strong>Tipo de afectación:</strong> {formData.tipoAfectacion}</p>
         </div>
       </div>
+
+      {/* Nota importante sobre el servicio gratuito */}
+      <div className="bg-emerald-50 border-2 border-emerald-400 rounded-lg p-4">
+        <div className="flex items-center space-x-3 mb-2">
+          <FaCheckCircle className="text-emerald-600 text-lg" />
+          <h4 className="font-bold text-emerald-800 text-base">Servicio Completamente Gratuito</h4>
+        </div>
+        <p className="text-emerald-700 text-sm mb-2">
+          <span className="font-bold">Cortés Rueda Abogados</span> es la compañía oficialmente designada para llevar estos casos de manera <span className="font-bold text-emerald-600">COMPLETAMENTE GRATUITA</span>.
+        </p>
+        <p className="text-emerald-600 text-xs font-semibold">
+          ⚠️ Recuerde: Si alguien le pide dinero por este servicio, está siendo estafado.
+        </p>
+      </div>
     </div>
   );
 
@@ -446,8 +462,28 @@ function App() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-teal-50 to-cyan-50 py-12 px-4 min-h-screen flex items-center justify-center">
+      {/* Banner Flotante de Advertencia */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#08a99c] to-teal-700 text-white py-3 px-4 shadow-lg">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center space-x-4 text-center">
+            <FaExclamationTriangle className="text-amber-400 text-xl flex-shrink-0" />
+            <div className="flex-1">
+              <p className="font-bold text-lg">
+                <span className="text-teal-200">Cortés Rueda Abogados</span> - Servicio <span className="text-emerald-400 font-bold">COMPLETAMENTE GRATUITO</span> para víctimas de Mocoa
+              </p>
+              <p className="text-sm text-teal-100">
+                <span className="font-bold">NO SE DEJE ENGAÑAR:</span> Si alguien le pide dinero, está siendo estafado
+              </p>
+            </div>
+            <FaExclamationTriangle className="text-amber-400 text-xl flex-shrink-0" />
+          </div>
+        </div>
+      </div>
+
+      <section className="bg-gradient-to-br from-teal-50 to-cyan-50 py-16 px-4 flex items-center justify-center" style={{ paddingTop: '120px' }}>
         <div className="container mx-auto text-center space-y-4">
+          <img src={Logo} alt="Logo" className="w-auto max-w-screen mx-auto " />
+          <hr className="my-8 max-w-[300px] w-full mx-auto text-teal-900" />
           <h1 className="text-6xl font-bold text-teal-900">
             ¿Fuiste víctima de la tragedia de Mocoa?
           </h1>
@@ -463,19 +499,37 @@ function App() {
             Regístrate completamente gratis para recibir información sobre el
             proceso de reparación y conoce tus derechos. Nuestro equipo jurídico se pondrá en contacto contigo para asesorarte sobre los siguientes pasos.
           </p>
-          <button 
-            onClick={() => document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-[#08a99c] hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg"
-          >
-            REGISTRARME GRATIS
-          </button>
+                      <button 
+              onClick={() => document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-[#08a99c] hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-300 shadow-lg cursor-pointer"
+            >
+              REGISTRARME GRATIS
+            </button>
+        </div>
+      </section>
+
+      {/* Sección de Advertencia Importante - Servicio Gratuito */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="bg-gray-100 backdrop-blur-sm rounded-lg p-6 border-2 border-white/10 text-center">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <FaExclamationTriangle className="text-amber-400 text-2xl" />
+              <h3 className="text-teal-700 font-bold text-xl">SERVICIO COMPLETAMENTE GRATUITO</h3>
+            </div>
+            <p className="text-slate-700 font--semibold text-lg mb-3">
+              <span className="text-teal-700 font-bold">Cortés Rueda Abogados</span> es la firma oficialmente designada para representar a las víctimas de Mocoa.
+            </p>
+            <p className="text-slate-700 font-bold">
+              ⚠️ NO TE DEJES ENGAÑAR: Si alguien te pide dinero, estás siendo estafado.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Sección ¿Quién Puede Registrarse? */}
       <section className="bg-gradient-to-br from-teal-900 to-[#08a99c] py-16 px-4">
         <div className="container mx-auto text-center space-y-8">
-          <h2 className="text-5xl font-bold text-yellow-400">
+          <h2 className="text-5xl font-bold text-amber-400">
             ¿Quién Puede Registrarse?
           </h2>
           <p className="text-xl text-teal-100 max-w-4xl mx-auto">
@@ -485,10 +539,10 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {/* Tarjeta 1: Perdiste tu vivienda */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-yellow-400 text-5xl mb-4 flex justify-center">
+              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
                 <FaHome />
               </div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-3">
+              <h3 className="text-amber-400 font-bold text-xl mb-3">
                 Perdiste tu vivienda
               </h3>
               <p className="text-teal-100 text-sm leading-relaxed">
@@ -498,10 +552,10 @@ function App() {
 
             {/* Tarjeta 2: Perdiste familiares */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-yellow-400 text-5xl mb-4 flex justify-center">
+              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
                 <FaHeart />
               </div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-3">
+              <h3 className="text-amber-400 font-bold text-xl mb-3">
                 Perdiste familiares
               </h3>
               <p className="text-teal-100 text-sm leading-relaxed">
@@ -511,10 +565,10 @@ function App() {
 
             {/* Tarjeta 3: Perdiste enseres y pertenencias */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-yellow-400 text-5xl mb-4 flex justify-center">
+              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
                 <FaBoxes />
               </div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-3">
+              <h3 className="text-amber-400 font-bold text-xl mb-3">
                 Perdiste enseres y pertenencias
               </h3>
               <p className="text-teal-100 text-sm leading-relaxed">
@@ -524,10 +578,10 @@ function App() {
 
             {/* Tarjeta 4: Perdiste tu negocio o empleo */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-[#08a99c] text-5xl mb-4 flex justify-center">
+              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
                 <FaBuilding />
               </div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-3">
+              <h3 className="text-amber-400 font-bold text-xl mb-3">
                 Perdiste tu negocio o empleo
               </h3>
               <p className="text-teal-100 text-sm leading-relaxed">
@@ -537,10 +591,10 @@ function App() {
 
             {/* Tarjeta 5: Sufriste daños físicos o psicológicos */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-yellow-400 text-5xl mb-4 flex justify-center">
+              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
                 <FaBrain />
               </div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-3">
+              <h3 className="text-amber-400 font-bold text-xl mb-3">
                 Sufriste daños físicos o psicológicos
               </h3>
               <p className="text-teal-100 text-sm leading-relaxed">
@@ -550,10 +604,10 @@ function App() {
 
             {/* Tarjeta 6: Eres familiar de víctima */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              <div className="text-yellow-400 text-5xl mb-4 flex justify-center">
+              <div className="text-amber-400 text-5xl mb-4 flex justify-center">
                 <FaUsers />
               </div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-3">
+              <h3 className="text-amber-400 font-bold text-xl mb-3">
                 Eres familiar de víctima
               </h3>
               <p className="text-teal-100 text-sm leading-relaxed">
@@ -572,9 +626,25 @@ function App() {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Registra tu Caso - Es Completamente Gratis
             </h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 mb-6">
               El registro inicial es completamente gratuito. Nuestro equipo jurídico se pondrá en contacto contigo para asesorarte sobre el proceso de reparación.
             </p>
+            
+            {/* Banner de Advertencia Importante */}
+            <div className="bg-amber-100 border-2 border-amber-400 rounded-lg p-4 mb-6">
+              <div className="flex items-center justify-center space-x-2 mb-2">
+                <FaExclamationTriangle className="text-amber-600 text-lg" />
+                <h3 className="text-amber-800 font-bold text-lg">¡ATENCIÓN IMPORTANTE!</h3>
+              </div>
+              <div className="text-center">
+                <p className="text-amber-800 font-semibold text-base mb-1">
+                  <span className="text-red-600">Cortés Rueda Abogados</span> es la compañía oficialmente designada para llevar estos casos de manera <span className="text-emerald-600 font-bold">COMPLETAMENTE GRATUITA</span>.
+                </p>
+                <p className="text-amber-700 text-sm">
+                  <span className="font-bold">NO TE DEJES ENGAÑAR:</span> Si alguien te pide dinero por este servicio, está siendo estafado.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Banner del Formulario */}
@@ -594,9 +664,9 @@ function App() {
           <form onSubmit={handleSubmit} className="bg-gray-50 rounded-b-lg p-8">
             {/* Título del Paso Actual */}
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-[#08a99c]">
-                Paso {currentStep} de {totalSteps}: {renderStepTitle()}
-              </h3>
+                          <h3 className="text-2xl font-bold text-[#08a99c]">
+              Paso {currentStep} de {totalSteps}: {renderStepTitle()}
+            </h3>
             </div>
 
             {/* Contenido del Paso Actual */}
@@ -678,9 +748,17 @@ function App() {
               </button>
               {openFAQ === 1 && (
                 <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed mb-3">
                     ¡NO! El registro inicial es completamente gratuito. Nuestro equipo jurídico se pondrá en contacto contigo para asesorarte sobre los siguientes pasos del proceso de reparación.
                   </p>
+                  <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                    <p className="text-emerald-800 font-semibold mb-2">
+                      <span className="text-red-600">Cortés Rueda Abogados</span> es la compañía oficialmente designada para llevar estos casos de manera <span className="text-emerald-600 font-bold">COMPLETAMENTE GRATUITA</span>.
+                    </p>
+                    <p className="text-emerald-700 text-sm">
+                      <span className="font-bold">ADVERTENCIA:</span> Si alguien te pide dinero por este servicio, está siendo estafado. Nuestro servicio es 100% gratuito para todas las víctimas.
+                    </p>
+                  </div>
                 </div>
               )}
             </div>
@@ -784,6 +862,46 @@ function App() {
                 </div>
               )}
             </div>
+
+            {/* FAQ 7 - Nueva FAQ sobre Cortés Rueda Abogados */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <button
+                onClick={() => toggleFAQ(7)}
+                className="w-full bg-[#08a99c] hover:bg-teal-700 text-white px-6 py-4 text-left flex justify-between items-center transition-colors duration-300"
+              >
+                <span className="font-semibold">
+                  ¿Quién es Cortés Rueda Abogados y por qué es importante?
+                </span>
+                {openFAQ === 7 ? <FaChevronUp /> : <FaChevronDown />}
+              </button>
+              {openFAQ === 7 && (
+                <div className="px-6 py-4 bg-white">
+                  <div className="space-y-4">
+                    <p className="text-gray-700 leading-relaxed">
+                      <span className="font-bold text-red-600">Cortés Rueda Abogados</span> es la firma jurídica oficialmente designada por la Defensoría del Pueblo para representar a las víctimas de la catástrofe de Mocoa.
+                    </p>
+                    
+                    <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                      <h4 className="font-bold text-emerald-800 mb-2">✅ Servicio Completamente Gratuito</h4>
+                      <p className="text-emerald-700 text-sm">
+                        Nuestro servicio es 100% gratuito para todas las víctimas. No cobramos honorarios, comisiones ni ningún tipo de pago.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <h4 className="font-bold text-red-800 mb-2">⚠️ Advertencia Contra Estafas</h4>
+                      <p className="text-red-700 text-sm">
+                        Si alguien le pide dinero por este servicio, está siendo estafado. Solo Cortés Rueda Abogados está autorizada para llevar estos casos de manera gratuita.
+                      </p>
+                    </div>
+                    
+                    <p className="text-gray-700 leading-relaxed">
+                      <span className="font-bold">Respaldo Oficial:</span> Contamos con el respaldo de la Defensoría del Pueblo y estamos comprometidos con la defensa de los derechos de las víctimas.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -793,31 +911,42 @@ function App() {
         <div className="container mx-auto max-w-6xl">
           {/* Encabezado */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-yellow-400 mb-6">
+            <h2 className="text-5xl font-bold text-amber-400 mb-6">
               Tu Equipo Legal Especializado
             </h2>
-            <p className="text-teal-100 max-w-4xl mx-auto leading-relaxed text-lg">
+            <p className="text-teal-100 max-w-4xl mx-auto leading-relaxed text-lg mb-6">
               Contarás con un equipo de abogados expertos en reparación a víctimas, completamente gratis
             </p>
+            
+            {/* Banner de Compañía Designada */}
+            <div className="bg-amber-500/20 backdrop-blur-sm rounded-lg p-4 border-2 border-amber-400 max-w-4xl mx-auto mb-8">
+              <div className="flex items-center justify-center space-x-2 mb-2">
+                <FaShieldAlt className="text-amber-400 text-xl" />
+                <h3 className="text-amber-400 font-bold text-lg">COMPAÑÍA OFICIALMENTE DESIGNADA</h3>
+              </div>
+              <p className="text-teal-100 font-semibold text-base">
+                <span className="text-teal-200 font-bold">Cortés Rueda Abogados</span> es la firma jurídica oficialmente designada por la Defensoría del Pueblo para representar a las víctimas de la catástrofe de Mocoa de manera <span className="text-emerald-400 font-bold">COMPLETAMENTE GRATUITA</span>.
+              </p>
+            </div>
           </div>
 
           {/* Tarjetas del Equipo */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Tarjeta 1: Dr. Juan Carlos Peláez Gutiérrez */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
               {/* Foto del Abogado */}
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-yellow-400 flex items-center justify-center overflow-hidden">
-                <div className="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-600 text-2xl font-bold">JC</span>
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-amber-400 flex items-center justify-center overflow-hidden">
+                <div className="w-28 h-28 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
+                  <img src={FotoPelaez} alt="Juan Carlos Peláez Gutiérrez" className="w-full h-full object-cover" />
                 </div>
               </div>
               
               {/* Información */}
               <div className="text-center mb-6">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">
+                <h3 className="text-amber-400 font-bold text-xl mb-2">
                   Dr. Juan Carlos Peláez Gutiérrez
                 </h3>
-                <p className="text-yellow-400 text-lg mb-4">
+                <p className="text-slate-200 text-lg mb-4">
                   Director Jurídico
                 </p>
                 <p className="text-teal-100 text-sm leading-relaxed">
@@ -827,7 +956,7 @@ function App() {
 
               {/* Tag de Especialización */}
               <div className="flex justify-center">
-                <div className="bg-white rounded-full px-4 py-2 flex items-center space-x-2 border border-yellow-400">
+                <div className="bg-white rounded-full px-4 py-2 flex items-center space-x-2 border border-amber-400">
                   <div className="w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
                     <FaGraduationCap className="text-white text-xs" />
                   </div>
@@ -841,18 +970,18 @@ function App() {
             {/* Tarjeta 2: Dra. Isabel Cortés Rueda */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
               {/* Foto de la Abogada */}
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-yellow-400 flex items-center justify-center overflow-hidden">
-                <div className="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-600 text-2xl font-bold">IC</span>
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-amber-400 flex items-center justify-center overflow-hidden">
+                <div className="w-28 h-28 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
+                  <img src={FotoCortes} alt="Isabel Cortés Rueda" className="w-full h-full object-cover scale-160 object-top" />
                 </div>
               </div>
               
               {/* Información */}
               <div className="text-center mb-6">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">
+                <h3 className="text-amber-400 font-bold text-xl mb-2">
                   Dra. Isabel Cortés Rueda
                 </h3>
-                <p className="text-yellow-400 text-lg mb-4">
+                <p className="text-slate-200 text-lg mb-4">
                   Coordinadora de Víctimas
                 </p>
                 <p className="text-teal-100 text-sm leading-relaxed">
@@ -868,41 +997,6 @@ function App() {
                   </div>
                   <span className="text-gray-800 text-sm font-medium">
                     Especialista en Derechos Humanos
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Tarjeta 3: Equipo Multidisciplinario */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-teal-300/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-xl">
-              {/* Foto del Equipo */}
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-yellow-400 flex items-center justify-center overflow-hidden">
-                <div className="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-600 text-2xl font-bold">EM</span>
-                </div>
-              </div>
-              
-              {/* Información */}
-              <div className="text-center mb-6">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">
-                  Equipo Multidisciplinario
-                </h3>
-                <p className="text-yellow-400 text-lg mb-4">
-                  Apoyo Integral
-                </p>
-                <p className="text-teal-100 text-sm leading-relaxed">
-                  Paula Casas, Estefanía González y Karem Cano. Trabajadoras sociales y especialistas en documentación de casos, te acompañarán durante todo el proceso.
-                </p>
-              </div>
-
-              {/* Tag de Especialización */}
-              <div className="flex justify-center">
-                <div className="bg-white rounded-full px-4 py-2 flex items-center space-x-2 border border-yellow-400">
-                  <div className="w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <FaHandshake className="text-white text-xs" />
-                  </div>
-                  <span className="text-gray-800 text-sm font-medium">
-                    Acompañamiento Total
                   </span>
                 </div>
               </div>
@@ -974,16 +1068,16 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Columna 1: Contacto y Ayuda */}
             <div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-6">
+              <h3 className="text-teal-600 font-bold text-xl mb-6">
                 Contacto y Ayuda
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <FaPhone className="text-[#08a99c]" />
+                  <FaPhone className="text-teal-600" />
                   <span className="text-white">+57 (8) 429-6060</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FaWhatsapp className="text-green-500" />
+                  <FaWhatsapp className="text-teal-600" />
                   <span className="text-white">+57 318 429-6060</span>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -999,24 +1093,24 @@ function App() {
 
             {/* Columna 2: Tus Derechos */}
             <div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-6">
+              <h3 className="text-teal-600 font-bold text-xl mb-6">
                 Tus Derechos
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <FaCheckCircle className="text-green-500" />
+                  <FaCheckCircle className="text-teal-600" />
                   <span className="text-white">Reparación integral</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FaCheckCircle className="text-green-500" />
+                  <FaCheckCircle className="text-teal-600" />
                   <span className="text-white">Acceso gratuito a la justicia</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FaCheckCircle className="text-green-500" />
+                  <FaCheckCircle className="text-teal-600" />
                   <span className="text-white">Acompañamiento jurídico</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FaCheckCircle className="text-green-500" />
+                  <FaCheckCircle className="text-teal-600" />
                   <span className="text-white">Protección de datos personales</span>
                 </div>
               </div>
@@ -1024,7 +1118,7 @@ function App() {
 
             {/* Columna 3: Respaldo Legal */}
             <div>
-              <h3 className="text-yellow-400 font-bold text-xl mb-6">
+              <h3 className="text-teal-600 font-bold text-xl mb-6">
                 Respaldo Legal
               </h3>
               <div className="space-y-4">
@@ -1039,7 +1133,7 @@ function App() {
           {/* Texto Inferior del Footer */}
           <div className="border-t border-gray-700 pt-8 text-center">
             <div className="mb-4">
-              <p className="text-white text-lg">
+              <p className="text-white text-lg mb-4">
                 <span className="font-bold">RECUERDA:</span> El registro inicial es completamente GRATUITO. Nuestro equipo jurídico se pondrá en contacto contigo para asesorarte sobre los siguientes pasos del proceso de reparación.
               </p>
             </div>
